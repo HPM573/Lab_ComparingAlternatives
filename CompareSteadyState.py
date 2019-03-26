@@ -12,11 +12,8 @@ cohortNoDrug.simulate(n_time_steps=D.TIME_STEPS)
 
 # create a cohort of patients for when the drug is available
 cohortWithDrug = Cls.Cohort(
-    id=2,   # since we don't have a mechanism to pair the simulated patients in
-            # cohorts with and without the drug, we chose a different random number seed
-            # for these two cohorts so that they remain independent from each other.
-    pop_size=D.SIM_POP_SIZE,
-    mortality_prob=D.MORTALITY_PROB * D.DRUG_EFFECT_RATIO)
+
+)
 # simulate the cohort
 cohortWithDrug.simulate(n_time_steps=D.TIME_STEPS)
 

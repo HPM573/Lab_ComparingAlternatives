@@ -15,10 +15,9 @@ calibratedModelWithDrug = Cls.CalibratedModel(
     csv_file_name='..\Lab_Calibration\CalibrationResults.csv',
     drug_effectiveness_ratio=D.DRUG_EFFECT_RATIO)
 # simulate the calibrated model
-calibratedModelWithDrug.simulate(num_of_simulated_cohorts=D.NUM_SIM_COHORTS,
-                                 cohort_size=D.SIM_POP_SIZE,
-                                 time_steps=D.TIME_STEPS,
-                                 cohort_ids=range(5000, 5000 + D.NUM_SIM_COHORTS))
+calibratedModelWithDrug.simulate(
+
+)
 
 # report mean and projection interval of expected survival time
 Support.print_outcomes(calibrated_model=calibratedModelNoDrug,

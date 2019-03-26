@@ -55,11 +55,8 @@ def print_comparative_outcomes(multi_cohort_no_drug, multi_cohort_with_drug):
     """
 
     # increase in survival time
-    increase_stat = Stat.DifferenceStatIndp(
-        name='Increase in mean survival time',
-        x=multi_cohort_with_drug.multiCohortOutcomes.meanSurvivalTimes,
-        y_ref=multi_cohort_no_drug.multiCohortOutcomes.meanSurvivalTimes
-    )
+    increase_stat =
+
     # mean and prediction interval
     mean = increase_stat.get_mean()
     pred_int = increase_stat.get_PI(alpha=D.ALPHA)
@@ -68,11 +65,8 @@ def print_comparative_outcomes(multi_cohort_no_drug, multi_cohort_with_drug):
           .format(1 - D.ALPHA, prec=0), mean, pred_int)
 
     # % increase in mean survival time
-    relative_diff_stat = Stat.RelativeDifferenceIndp(
-        name='% increase in mean survival time',
-        x=multi_cohort_with_drug.multiCohortOutcomes.meanSurvivalTimes,
-        y_ref=multi_cohort_no_drug.multiCohortOutcomes.meanSurvivalTimes
-    )
+    relative_diff_stat =
+
     # estimate and prediction interval
     mean = relative_diff_stat.get_mean()
     pred_int = relative_diff_stat.get_PI(alpha=D.ALPHA)
